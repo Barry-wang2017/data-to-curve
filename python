@@ -1,0 +1,48 @@
+import pandas as pd
+
+# Load CSV files
+file_paths = ['file1.csv', 'file2.csv', 'file3.csv']
+data_frames = [pd.read_csv(file) for file in file_paths]
+
+# Process the data as needed
+
+
+import matplotlib.pyplot as plt
+
+# Plot the curves with specific columns as X and Y axis
+plt.plot(data_frames[0]['X_column'], data_frames[0]['Y_column'], label='Curve 1')
+plt.plot(data_frames[1]['X_column'], data_frames[1]['Y_column'], label='Curve 2')
+# Add more curves as needed
+
+# Customize the plot and show
+plt.xlabel('X-axis label')
+plt.ylabel('Y-axis label')
+plt.legend()
+plt.show()
+
+
+# Adjust the range of X and Y axis
+plt.xlim(x_min, x_max)  # Set the limits on the x-axis
+plt.ylim(y_min, y_max)  # Set the limits on the y-axis
+
+
+from scipy import interpolate
+
+# Perform interpolation on the data as needed
+
+
+# Save the plot with different colors
+plt.savefig('curves_plot.png')
+
+
+# Adjust the resolution of the saved image
+plt.savefig('curves_plot.png', dpi=300)  # Set the resolution to 300 dpi
+
+
+# Merge all curves into one image
+plt.subplot(111)
+plt.plot(data_frames[0]['X_column'], data_frames[0]['Y_column'], label='Curve 1')
+plt.plot(data_frames[1]['X_column'], data_frames[1]['Y_column'], label='Curve 2')
+# Add more curves as needed
+plt.legend()
+plt.show()
